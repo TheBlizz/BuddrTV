@@ -3,14 +3,14 @@
     <channel>
         <channel-id></channel-id>
         <channel-name>Nickelodeon</channel-name>
-        <url>http://fl1.moveonjoy.com/NICKELODEON/index.m3u8</url>
+        <url>https://fl1.moveonjoy.com/NICKELODEON/index.m3u8</url>
         <logo></logo>
         <tv-guide></tv-guide>
     </channel>
     <channel>
         <channel-id></channel-id>
         <channel-name>Nicktoons</channel-name>
-        <url>http://fl1.moveonjoy.com/NICKTOONS/index.m3u8</url>
+        <url>https://fl1.moveonjoy.com/NICKTOONS/index.m3u8</url>
         <logo></logo>
         <tv-guide></tv-guide>
     </channel>
