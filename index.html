@@ -21,11 +21,16 @@
                 bottom: 10px;
                 z-index: 2;
                 text-align: center;
-                left: 50%;
+                left: 0;
                 font-size: 200%;
                 padding: 10px;
                 padding-left: 15px;
                 padding-right: 15px;
+                opacity: 0.30;
+            }
+            #bottomfooter:hover
+            {
+                opacity: 1;
             }
         </style>
     </head>
@@ -56,10 +61,10 @@
             <div id="channels" class="list-group" role="tablist">
             </div>
         </div>
-        <a id="bottomfooter" href="#scrollUp" class="btn btn-danger fa-solid fa-arrow-up"></a>
+        <button onclick="getGuide()" id="bottomfooter" class="btn btn-danger fa-solid fa-tv"></button>
         <script>
                 var player = videojs('mainVideo');
-                this.player.controls(false);
+                //this.player.controls(false);
                 var buttonHTML;
                 function getM3u8(button)
                 {
@@ -71,8 +76,9 @@
                     button.style.zIndex = 1;
                     buttonHTML = button.getElementsByTagName('p')[0].innerHTML;
                     console.log(buttonHTML);
-                    player.controls(false);
+                    //player.controls(false);
                     //document.getElementByTagName('button').classList.remove('active');
+                    document.getElementById('mainVideo').style.display = 'block';
                 }
                 
                 function getInfo(show)
@@ -97,6 +103,19 @@
                 function delInfo(show)
                 {
                     show.getElementsByTagName('p')[0].innerHTML = "";
+                }
+                
+                function getGuide()
+                {
+                    if(document.getElementById('mainVideo').style.display == 'none')
+                    {
+                        document.getElementById('mainVideo').style.display = 'block';
+                    }
+                    else
+                    {
+                        document.getElementById('mainVideo').style.display = 'none';
+                    }
+                    
                 }
                 
                 function getChannels()
